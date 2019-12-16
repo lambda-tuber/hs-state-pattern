@@ -1,0 +1,36 @@
+@startuml state_class_diagram
+skinparam defaultFontName MS Gothic
+skinparam monochrome true
+'skinparam linetype ortho
+skinparam arrowThickness 2
+'left to right direction
+
+allow_mixing
+hide empty members
+hide circle
+
+title <size:18>State Pattern Class Diagram</size>
+
+class Context {
+    + request
+}
+
+interface AppState <<interface>> {
+    + entryAction
+    + exitAction
+    + initAction
+    + launchAction
+    + disconnectAction
+    + terminateAction
+}
+
+class StartingState
+class RunningState
+class StoppingState
+
+Context o--r-- AppState
+AppState <|.. StartingState
+AppState <|.. RunningState
+AppState <|.. StoppingState
+
+@enduml

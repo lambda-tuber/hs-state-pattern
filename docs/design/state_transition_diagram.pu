@@ -1,0 +1,35 @@
+@startuml 102_state
+skinparam defaultFontName MS Gothic
+skinparam monochrome true
+skinparam linetype ortho
+skinparam arrowThickness 2
+left to right direction
+
+title <size:18>State Transition Diagram</size>
+
+state Starting
+state Running
+state Stopping
+
+[*] -right-> Starting
+Starting --> Running : inited
+Running --> Stopping : disconnected
+Stopping -r-> [*]
+
+Starting: entryAction
+Starting: initAction
+'Starting: launch
+'Starting: disconnect
+'Starting: terminate
+Starting: exitAction
+
+Running: entryAction
+Running: launchAction
+Running: disconnectAction
+Running: exitAction
+
+Stopping: entryAction
+Stopping: terminateAction
+Stopping: exitAction
+
+@enduml

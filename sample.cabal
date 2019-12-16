@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 99685f6c97c1f8b0e0e4f31d7f430e8bfc1c51668c23b533fc85cd743adc95df
+
+name:           sample
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/sample#readme>
+homepage:       https://github.com/githubuser/sample#readme
+bug-reports:    https://github.com/githubuser/sample/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/sample
+
+library
+  exposed-modules:
+      Lib
+      State.Running
+      State.Starting
+      State.Starting.Disconnect
+      State.Starting.Init
+      State.Starting.Launch
+      State.Starting.Terminate
+      State.Stopping
+      TH
+      Type
+      Utility
+  other-modules:
+      Paths_sample
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans
+  build-depends:
+      base >=4.7 && <5
+    , template-haskell
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable sample
+  main-is: Main.hs
+  other-modules:
+      Paths_sample
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans
+  build-depends:
+      base >=4.7 && <5
+    , sample
+    , template-haskell
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite sample-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_sample
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans
+  build-depends:
+      base >=4.7 && <5
+    , sample
+    , template-haskell
+    , text
+    , transformers
+  default-language: Haskell2010

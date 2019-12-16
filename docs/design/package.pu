@@ -1,0 +1,49 @@
+@startuml package
+skinparam defaultFontName MS Gothic
+skinparam monochrome true
+skinparam linetype ortho
+skinparam arrowThickness 2
+
+allow_mixing
+hide empty members
+hide circle
+
+title <size:18>Package Diagram</size>
+
+package Main {
+}
+
+package Lib {
+  class Context
+}
+
+package State {
+  package Starting {
+  }
+
+  package Running {
+  }
+
+  package Stopping {
+  }
+}
+
+package Type {
+}
+
+note top of Context
+  実際には、main関数
+end note
+
+Main --> Lib
+Lib -l-> State
+Lib --> Type
+State --> Type
+
+package Dummy1
+hide Dummy1
+Lib -l-> Dummy1
+Dummy1 --> Type 
+Dummy1 --r--> State
+
+@enduml

@@ -42,13 +42,25 @@
 [![hs-state-pattern](http://img.youtube.com/vi/3eDoWe85TDI/0.jpg)](https://youtu.be/3eDoWe85TDI)
 
 
-## 第9回 予定
+## 第9回 GADTsで部分型付け
 
-## 第10回 予定
+[![hs-state-pattern](http://img.youtube.com/vi/CFyUvbvsECI/0.jpg)](https://youtu.be/CFyUvbvsECI)
 
-## 第11回 予定
 
-## 第12回 予定
+## 第10回 データファミリーで部分型付けx2
+
+[![hs-state-pattern](http://img.youtube.com/vi/s3t_9D9Yrmw/0.jpg)](https://youtu.be/s3t_9D9Yrmw)
+
+
+## 第11回 GADTsで部分型付けx2
+
+[![hs-state-pattern](http://img.youtube.com/vi/s5YTNQSH_jM/0.jpg)](https://youtu.be/s5YTNQSH_jM)
+
+
+## 第12回 型変数が複数の型クラス
+
+[![hs-state-pattern](http://img.youtube.com/vi/KKs4063YsM0/0.jpg)](https://youtu.be/KKs4063YsM0)
+
 
 ## 第13回 予定
 
