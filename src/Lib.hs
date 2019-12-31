@@ -33,7 +33,6 @@ app = do
   let reqStore = [
           RequestW (InitRequest (InitRequestData 1))
         , RequestW (LaunchRequest (LaunchRequestData 2))
---      , RequestW (TransitRequest (TransitRequestData StartingToRunning))
         , RequestW (TransitRequest (TransitRequestData RunningToStopping))
         , RequestW (DisconnectRequest (DisconnectRequestData 3))
         , RequestW (TerminateRequest (TerminateRequestData 4))

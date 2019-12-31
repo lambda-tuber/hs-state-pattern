@@ -5,7 +5,10 @@
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
 
-module TH where
+module TH (
+    funcTH_transit
+  , instanceTH_IAppState
+  ) where
 
 import qualified GHC.Base
 import qualified GHC.Show
